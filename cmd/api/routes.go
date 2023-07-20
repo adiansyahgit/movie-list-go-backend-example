@@ -13,6 +13,7 @@ func (app *application) routes() http.Handler {
 	mux.Use(middleware.Recoverer)
 	mux.Get("/", app.Home)
 	mux.Get("/movies", app.AllMovies)
+	mux.Get("/authenticate", app.authencticate)
 
 	return mux
 }
